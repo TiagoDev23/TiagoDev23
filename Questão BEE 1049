@@ -1,0 +1,49 @@
+BEE 1049
+beecrowd | 1049 Animal
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main () {
+	
+	char vertebra[18], classe[18], alimentacao[18];
+	
+	printf("Insira 3 palavras que definem o tipo de animal:\n");
+    scanf("%s", &vertebra);
+    scanf("%s", &classe);
+    scanf("%s", &alimentacao);
+    
+    if (strcmp(vertebra, "vertebrado")==0){
+        if (strcmp(classe, "ave")==0){
+            if (strcmp(alimentacao, "carnivoro")==0){
+                printf("\naguia\n\n");
+          } if (strcmp(alimentacao, "onivoro")==0){
+                printf("\npomba\n\n");
+            }   
+        }else if (strcmp(classe, "mamifero")==0){
+            if (strcmp(alimentacao, "onivoro")==0){
+                printf("\nhomem\n\n");
+          } if (strcmp(alimentacao, "herbivoro")==0){
+                printf("\nvaca\n\n");
+            }   
+        }
+    } else if (strcmp(vertebra, "invertebrado")==0){
+        if (strcmp(classe,"inseto")==0){
+            if (strcmp(vertebra, "hematofago")==0){
+                printf("\npulga\n\n");
+          } if (strcmp(alimentacao, "herbivoro")==0){
+                printf("\nlagarta\n\n");
+            }   
+        }else if (strcmp(classe,"anelideo")==0){
+            if (strcmp(alimentacao, "hematofago")==0){
+                printf("\nsanguessuga\n\n");
+          } if (strcmp(alimentacao, "onivoro")==0){
+                printf("\nminhoca\n\n");
+            }   
+        }
+    }
+    
+	system("pause");
+	return(0);
+}
